@@ -1,0 +1,77 @@
+\doxysection{Goal\+Controller.\+h}
+\hypertarget{_goal_controller_8h_source}{}\label{_goal_controller_8h_source}\index{C:/Users/Paweł/Desktop/robot/robot/GoalController.h@{C:/Users/Paweł/Desktop/robot/robot/GoalController.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Position.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_bluetooth_controller}{BluetoothController}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{enum\ class}\ GoalType}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ goToPosition,\ goToAngle}
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_goal_param}{GoalParam}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_goal_param}{\string~GoalParam}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }PositionGoalParam\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_goal_param}{GoalParam}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \doxymbox{\hyperlink{struct_position}{Position}}\ \_Position;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ PositionGoalParam(\doxymbox{\hyperlink{struct_position}{Position}}\ position);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \doxymbox{\hyperlink{struct_position}{Position}}\ getPosition();}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_angle_goal_param}{AngleGoalParam}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_goal_param}{GoalParam}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{double}\ \_Angle;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{double}\ getAngle();}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }Goal}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ GoalType\ \_Type;}
+\DoxyCodeLine{00042\ \ \ std::shared\_ptr<GoalParam>\ \_Param;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ Goal();}
+\DoxyCodeLine{00046\ \ \ Goal(GoalType\ type,\ std::shared\_ptr<GoalParam>\ param);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ GoalType\ getType();}
+\DoxyCodeLine{00049\ \ \ std::shared\_ptr<GoalParam>\ getParam();}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_goal_controller}{GoalController}}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ \doxymbox{\hyperlink{class_bluetooth_controller}{BluetoothController}}*\ \_BluetoothController;\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ std::deque\ <Goal>\ \_Goals;\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{bool}\ StringtoDouble(String\ text,\ \textcolor{keywordtype}{double}\&\ result);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordtype}{void}\ loadPosition();}
+\DoxyCodeLine{00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_goal_controller_a504a86cea47f8ac3197e5339b63c500d}{update}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_goal_controller_a79e78cd8d7e068276f3341b291408d73}{setBluetoothController}}(\doxymbox{\hyperlink{class_bluetooth_controller}{BluetoothController}}*\ controller);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \doxymbox{\hyperlink{class_goal}{Goal}}\ \doxymbox{\hyperlink{class_goal_controller_aa40727f1cc4c5ee5dbae619296892e22}{getFrontGoal}}();}
+\DoxyCodeLine{00092\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_goal_controller_abb6d3b2ee1b8326f4b6d4c65d523aff9}{popFrontGoal}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_goal_controller_a2a25da5907f6ca8d69ee80e69c67f688}{isEmpty}}();}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+
+\end{DoxyCode}

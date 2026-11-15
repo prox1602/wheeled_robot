@@ -1,0 +1,61 @@
+\doxysection{Localization\+Controller.\+h}
+\hypertarget{_localization_controller_8h_source}{}\label{_localization_controller_8h_source}\index{C:/Users/Paweł/Desktop/robot/robot/LocalizationController.h@{C:/Users/Paweł/Desktop/robot/robot/LocalizationController.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ one}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Position.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SensorsController.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\#include\ "{}EngineController.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_engine_controller}{EngineController}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_localization_controller_aaab678d29d8baa9eb91713c93ae6a8ba}{LocalizationController}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \doxymbox{\hyperlink{struct_position}{Position}}\ \_CurrentPosition;\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{double}\ CurrentAngleZ;}
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordtype}{double}\ CurrentAngleX;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \doxymbox{\hyperlink{class_sensors_controller}{SensorsController}}*\ \_SensorsController;}
+\DoxyCodeLine{00020\ \ \ \doxymbox{\hyperlink{class_engine_controller}{EngineController}}*\ \_EngineController;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{double}\ \_WheelDiameterInMeters;}
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{int}\ \_NumberOfSlots;\ }
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{double}\ \_AnglePerSlot;\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{double}\ \_WheelRadiusInMeters;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \doxymbox{\hyperlink{class_alarm}{Alarm}}\ \_CountingAlarm;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{bool}\ \_isRobotLifted;}
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{bool}\ \_isRobotSlipping;}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{bool}\ \_isRobotStuck;}
+\DoxyCodeLine{00032\ \ \ }
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{bool}\ \_doesIMUWorks;\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{keywordtype}{double}\ \_liftedTimeCounter\ =\ 0.0;}
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{double}\ \_slipTimeCounter\ =\ 0.0;}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{double}\ \_stuckTimeCounter\ =\ 0.0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{double}\ \_previousSpeed\ =\ 0.0;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \doxymbox{\hyperlink{class_localization_controller_aaab678d29d8baa9eb91713c93ae6a8ba}{LocalizationController}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_localization_controller_ad0a0f7cca20467bb164631b73a3e5f5e}{setup}}(\textcolor{keywordtype}{double}\ wheelDiameterInMeters,\ \textcolor{keywordtype}{int}\ numberOfSlots);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_localization_controller_a0f13e02ed498dd4fed0f11953f997541}{setSensorsController}}(\doxymbox{\hyperlink{class_sensors_controller}{SensorsController}}\ \&controller);}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_localization_controller_a94f0d0d9c142c667d1ebacaecbbeea3f}{setEngineController}}(\doxymbox{\hyperlink{class_engine_controller}{EngineController}}\ \&controller);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_localization_controller_a1a7f989e8ae75041bed96a13dd1e18b0}{isRobotLifted}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_localization_controller_a928a0d7d9ea03181080e0b8892251ee9}{isRobotSlipping}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_localization_controller_a5c3c9117937ff7f72afdb72e39162842}{update}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \doxymbox{\hyperlink{struct_position}{Position}}\ \doxymbox{\hyperlink{class_localization_controller_ae9231fd0804d65d36d99c8bd04c9f6a6}{getCurrentPosition}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_localization_controller_aeb7310bfacf9ac92c8a72afde947156b}{getCurrentAngleZ}}();}
+\DoxyCodeLine{00087\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,71 @@
+\doxysection{Bluetooth\+Controller.\+h}
+\hypertarget{_bluetooth_controller_8h_source}{}\label{_bluetooth_controller_8h_source}\index{C:/Users/Paweł/Desktop/robot/robot/BluetoothController.h@{C:/Users/Paweł/Desktop/robot/robot/BluetoothController.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <BLEDevice.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <BLEServer.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <BLEUtils.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <BLE2902.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_bluetooth_controller}{BluetoothController}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ BLEServer*\ \_BLServer\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00017\ \ \ BLEService*\ \_BLService\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00018\ \ \ BLECharacteristic*\ TransmitCharacteristic\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00019\ \ \ BLECharacteristic*\ ReceiveCharacteristic\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ SERVICE\_UUID\ =\ \textcolor{stringliteral}{"{}6E400001-\/B5A3-\/F393-\/E0A9-\/E50E24DCCA9E"{}};}
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ CHARACTERISTIC\_UUID\_RX\ =\ \textcolor{stringliteral}{"{}6E400002-\/B5A3-\/F393-\/E0A9-\/E50E24DCCA9E"{}};}
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ CHARACTERISTIC\_UUID\_TX\ =\ \textcolor{stringliteral}{"{}6E400003-\/B5A3-\/F393-\/E0A9-\/E50E24DCCA9E"{}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{bool}\ \_deviceConnected\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{bool}\ \_oldDeviceConnected\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ std::queue\ <String>\ \_CommandsBuffor;\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ std::vector<String>\ splitString(String\ text);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bluetooth_controller_a3bf822deb412f4581ac9b3ce8c4a5a41}{setup}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ deviceName);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bluetooth_controller_a602af384afce943eacbf22dc67bca3c4}{update}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ setDeviceConnected(\textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bluetooth_controller_afbd287f45c1c735bfb63162a9622d7c2}{receiveCommand}}(String\ command);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_bluetooth_controller_a484e6fc6707220de39b569fddb437237}{isBufforFull}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ std::queue\ <String>*\ \doxymbox{\hyperlink{class_bluetooth_controller_a9023b9387b638e2a0a52e2f447fe53eb}{getBuffor}}();}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{class\ }ServerCallbacks\ :\ \textcolor{keyword}{public}\ BLEServerCallbacks}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \doxymbox{\hyperlink{class_bluetooth_controller}{BluetoothController}}*\ \_Controller;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00075\ \ \ ServerCallbacks(\doxymbox{\hyperlink{class_bluetooth_controller}{BluetoothController}}*\ controller);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{void}\ onConnect(BLEServer*\ pServer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \textcolor{keywordtype}{void}\ onDisconnect(BLEServer*\ pServer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{class\ }ReceiverCallbacks\ :\ \textcolor{keyword}{public}\ BLECharacteristicCallbacks}
+\DoxyCodeLine{00083\ \{}
+\DoxyCodeLine{00084\ \ \ \doxymbox{\hyperlink{class_bluetooth_controller}{BluetoothController}}*\ \_Controller;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ ReceiverCallbacks(\doxymbox{\hyperlink{class_bluetooth_controller}{BluetoothController}}*\ controller);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordtype}{void}\ onWrite(BLECharacteristic\ *pCharacteristic);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \};}
+
+\end{DoxyCode}

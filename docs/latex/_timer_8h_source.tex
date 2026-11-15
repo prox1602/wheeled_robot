@@ -1,0 +1,34 @@
+\doxysection{Timer.\+h}
+\hypertarget{_timer_8h_source}{}\label{_timer_8h_source}\index{C:/Users/Paweł/Desktop/robot/robot/Timer.h@{C:/Users/Paweł/Desktop/robot/robot/Timer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ one}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \textcolor{keywordtype}{double}\ OldTime;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \doxymbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_timer_a64146300b02f329b1ded614bfce949e0}{getDelta}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_timer_a6a69c5013bf0718850825e647619f62d}{clear}}();}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_alarm_ad4bddc15dac1dfb534d3d87eef0a38c8}{Alarm}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \doxymbox{\hyperlink{class_timer}{Timer}}\ \_Timer;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{double}\ \_LimitInSec;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \doxymbox{\hyperlink{class_alarm_ad4bddc15dac1dfb534d3d87eef0a38c8}{Alarm}}(\textcolor{keywordtype}{double}\ timeInSec);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_alarm_a9979de514add72fbba59e65b1767cbfb}{setLimit}}(\textcolor{keywordtype}{double}\ limitInSec);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_alarm_a32a1f0af535e8dbc02fc7581074ca5e9}{update}}();}
+\DoxyCodeLine{00055\ \};}
+
+\end{DoxyCode}

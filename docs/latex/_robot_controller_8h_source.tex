@@ -1,0 +1,42 @@
+\doxysection{Robot\+Controller.\+h}
+\hypertarget{_robot_controller_8h_source}{}\label{_robot_controller_8h_source}\index{C:/Users/Paweł/Desktop/robot/robot/RobotController.h@{C:/Users/Paweł/Desktop/robot/robot/RobotController.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}EngineController.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}LocalizationController.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}BluetoothController.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_robot_controller}{RobotController}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \doxymbox{\hyperlink{class_engine_controller}{EngineController}}\ \_EngineController;\ }
+\DoxyCodeLine{00014\ \ \ \doxymbox{\hyperlink{class_goal_controller}{GoalController}}\ \_GoalController;\ }
+\DoxyCodeLine{00015\ \ \ \doxymbox{\hyperlink{class_sensors_controller}{SensorsController}}\ \_SensorsController;\ }
+\DoxyCodeLine{00016\ \ \ \doxymbox{\hyperlink{class_localization_controller}{LocalizationController}}\ \_LocalizationController;\ }
+\DoxyCodeLine{00017\ \ \ \doxymbox{\hyperlink{class_bluetooth_controller}{BluetoothController}}\ \_BluetoothController;\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordtype}{int}\ LeftEngine1Pin\ =\ 4;\ \ \ }
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{int}\ LeftEngine2Pin\ =\ 5;\ \ \ }
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{int}\ RightEngine1Pin\ =\ 7;\ \ }
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{int}\ RightEngine2Pin\ =\ 6;\ \ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{int}\ MotorsFreq\ =\ 10000;\ \ \ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{int}\ MotorsResolution\ =\ 9;\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{int}\ LeftEncoderPin\ =\ 12;\ }
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{int}\ RightEncoderPin\ =\ 13;}
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{int}\ SDAgyroPin\ =\ 8;}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{int}\ SCLgyroPin\ =\ 9;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{double}\ \_WheelDiameterInMeters\ =\ 0.0655;}
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{int}\ \_NumberOfSlots\ =\ 30;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_robot_controller_a4389fc3debdb66f75caf6a14a0018e43}{setup}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_robot_controller_a6ae29d03e20d5b24e4b83a43f14602a2}{run}}();}
+\DoxyCodeLine{00046\ \};}
+
+\end{DoxyCode}

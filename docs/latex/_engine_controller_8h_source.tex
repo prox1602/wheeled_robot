@@ -1,0 +1,51 @@
+\doxysection{Engine\+Controller.\+h}
+\hypertarget{_engine_controller_8h_source}{}\label{_engine_controller_8h_source}\index{C:/Users/Paweł/Desktop/robot/robot/EngineController.h@{C:/Users/Paweł/Desktop/robot/robot/EngineController.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GoalController.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\#include\ "{}LocalizationController.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_localization_controller}{LocalizationController}};}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_engine}{Engine}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ PIN1;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ PIN2;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{int}\ maxValue;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{double}\ calculatePower(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a4e7cf8e397e4e4f2947e6f54d5e0076e}{setup}}(\textcolor{keywordtype}{int}\ Pin1,\ \textcolor{keywordtype}{int}\ Pin2,\ \textcolor{keywordtype}{int}\ MotorsResolution,\ \textcolor{keywordtype}{int}\ MotorsFreq);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ac359483849f5ddae5b417868027b157f}{update}}(\textcolor{keywordtype}{double}\ Power);\ \ }
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_engine_controller}{EngineController}}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \doxymbox{\hyperlink{class_goal_controller}{GoalController}}*\ \_GoalController;\ }
+\DoxyCodeLine{00041\ \ \ \doxymbox{\hyperlink{class_localization_controller}{LocalizationController}}*\ \_LocalizationController;\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \doxymbox{\hyperlink{class_engine}{Engine}}\ LeftEngine;}
+\DoxyCodeLine{00044\ \ \ \doxymbox{\hyperlink{class_engine}{Engine}}\ RightEngine;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{double}\ \_LeftEnginePower;\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{double}\ \_RightEnginePower;\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{bool}\ \_allowReverseMode\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_controller_ad5b5a71f36517a599204fee021fe11bc}{setup}}(\textcolor{keywordtype}{int}\ L1Pin,\ \textcolor{keywordtype}{int}\ L2Pin,\ \textcolor{keywordtype}{int}\ P1Pin,\ \textcolor{keywordtype}{int}\ P2Pin,\ \textcolor{keywordtype}{int}\ MotorsResolution,\ \textcolor{keywordtype}{int}\ MotorsFreq);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_controller_a5490a32067f47bc55a50740f71b950f2}{attachGoalController}}(\doxymbox{\hyperlink{class_goal_controller}{GoalController}}*\ goalController);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_controller_a1543e1028fbfc22280b5a1ad8029c226}{setLocalizationController}}(\doxymbox{\hyperlink{class_localization_controller}{LocalizationController}}*\ controller);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_engine_controller_a2bee04d862bde7bbdfbe5d413140fd1d}{getLeftEnginePower}}();}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_engine_controller_a716fef25c75b63dfa4c366f0b67e0d64}{getRightEnginePower}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_controller_a77398847c3a80f8ca2eeb5488e1ca942}{update}}();}
+\DoxyCodeLine{00090\ \};}
+
+\end{DoxyCode}

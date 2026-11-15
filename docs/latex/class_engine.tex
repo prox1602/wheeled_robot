@@ -1,0 +1,55 @@
+\doxysection{Engine Class Reference}
+\hypertarget{class_engine}{}\label{class_engine}\index{Engine@{Engine}}
+
+
+{\ttfamily \+\#include $<$Engine\+Controller.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_engine_a4e7cf8e397e4e4f2947e6f54d5e0076e}{setup}} (int Pin1, int Pin2, int Motors\+Resolution, int Motors\+Freq)
+\item 
+void \doxymbox{\hyperlink{class_engine_ac359483849f5ddae5b417868027b157f}{update}} (double Power)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Single engine class. It is use to control the motion of the engine 
+
+\label{doc-func-members}
+\Hypertarget{class_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_a4e7cf8e397e4e4f2947e6f54d5e0076e}\index{Engine@{Engine}!setup@{setup}}
+\index{setup@{setup}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{class_engine_a4e7cf8e397e4e4f2947e6f54d5e0076e} 
+void Engine::\+setup (\begin{DoxyParamCaption}\item[{int}]{Pin1}{, }\item[{int}]{Pin2}{, }\item[{int}]{Motors\+Resolution}{, }\item[{int}]{Motors\+Freq}{}\end{DoxyParamCaption})}
+
+setup method of engine. It sets up PWM pins to control the power of engine 
+\begin{DoxyParams}{Parameters}
+{\em Pin1} & -\/ first pin to control the engine \\
+\hline
+{\em Pin2} & -\/ second pin to control the engine \\
+\hline
+{\em Motors\+Resolution} & -\/ resolution of PWM \\
+\hline
+{\em Motors\+Freq} & -\/ frequency of PWM \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_ac359483849f5ddae5b417868027b157f}\index{Engine@{Engine}!update@{update}}
+\index{update@{update}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_engine_ac359483849f5ddae5b417868027b157f} 
+void Engine::\+update (\begin{DoxyParamCaption}\item[{double}]{Power}{}\end{DoxyParamCaption})}
+
+update method of engine. It sets new value of engine power; 
+\begin{DoxyParams}{Parameters}
+{\em Power} & -\/ value of power to be set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Engine\+Controller.\+h\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Engine\+Controller.\+cpp\end{DoxyCompactItemize}

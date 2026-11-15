@@ -1,0 +1,62 @@
+\doxysection{Alarm Class Reference}
+\hypertarget{class_alarm}{}\label{class_alarm}\index{Alarm@{Alarm}}
+
+
+{\ttfamily \+\#include $<$Timer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_alarm_ad4bddc15dac1dfb534d3d87eef0a38c8}{Alarm}} (double time\+In\+Sec)
+\item 
+void \doxymbox{\hyperlink{class_alarm_a9979de514add72fbba59e65b1767cbfb}{set\+Limit}} (double limit\+In\+Sec)
+\item 
+bool \doxymbox{\hyperlink{class_alarm_a32a1f0af535e8dbc02fc7581074ca5e9}{update}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It works simiiarly to \doxylink{class_timer}{Timer} but it is used to trigger a specific action after set amount of time has elapsed. 
+
+\label{doc-constructors}
+\Hypertarget{class_alarm_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_alarm_ad4bddc15dac1dfb534d3d87eef0a38c8}\index{Alarm@{Alarm}!Alarm@{Alarm}}
+\index{Alarm@{Alarm}!Alarm@{Alarm}}
+\doxysubsubsection{\texorpdfstring{Alarm()}{Alarm()}}
+{\footnotesize\ttfamily \label{class_alarm_ad4bddc15dac1dfb534d3d87eef0a38c8} 
+Alarm::\+\+Alarm (\begin{DoxyParamCaption}\item[{double}]{time\+In\+Sec}{}\end{DoxyParamCaption})}
+
+Initializing \doxylink{class_alarm}{Alarm}. 
+\begin{DoxyParams}{Parameters}
+{\em time\+In\+Sec} & the time interval at which an action should be triggered \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_alarm_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_alarm_a9979de514add72fbba59e65b1767cbfb}\index{Alarm@{Alarm}!setLimit@{setLimit}}
+\index{setLimit@{setLimit}!Alarm@{Alarm}}
+\doxysubsubsection{\texorpdfstring{setLimit()}{setLimit()}}
+{\footnotesize\ttfamily \label{class_alarm_a9979de514add72fbba59e65b1767cbfb} 
+void Alarm::\+set\+Limit (\begin{DoxyParamCaption}\item[{double}]{limit\+In\+Sec}{}\end{DoxyParamCaption})}
+
+It sets the limit/\+period/\+the time interval at which an action should be triggered 
+\begin{DoxyParams}{Parameters}
+{\em limit\+In\+Sec} & the time interval at which an action should be triggered \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_alarm_a32a1f0af535e8dbc02fc7581074ca5e9}\index{Alarm@{Alarm}!update@{update}}
+\index{update@{update}!Alarm@{Alarm}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_alarm_a32a1f0af535e8dbc02fc7581074ca5e9} 
+bool Alarm::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Updating the \doxylink{class_alarm}{Alarm}. It returns true if given time has elapsed and clears the timer. 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Timer.\+h\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Timer.\+cpp\end{DoxyCompactItemize}

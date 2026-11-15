@@ -1,0 +1,106 @@
+\doxysection{Engine\+Controller Class Reference}
+\hypertarget{class_engine_controller}{}\label{class_engine_controller}\index{EngineController@{EngineController}}
+
+
+{\ttfamily \+\#include $<$Engine\+Controller.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_engine_controller_ad5b5a71f36517a599204fee021fe11bc}{setup}} (int L1\+Pin, int L2\+Pin, int P1\+Pin, int P2\+Pin, int Motors\+Resolution, int Motors\+Freq)
+\begin{DoxyCompactList}\small\item\em flag -\/ true if driving in reversed is allowed \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_engine_controller_a5490a32067f47bc55a50740f71b950f2}{attach\+Goal\+Controller}} (\doxymbox{\hyperlink{class_goal_controller}{Goal\+Controller}} \texorpdfstring{$\ast$}{*}goal\+Controller)
+\item 
+void \doxymbox{\hyperlink{class_engine_controller_a1543e1028fbfc22280b5a1ad8029c226}{set\+Localization\+Controller}} (\doxymbox{\hyperlink{class_localization_controller}{Localization\+Controller}} \texorpdfstring{$\ast$}{*}controller)
+\item 
+double \doxymbox{\hyperlink{class_engine_controller_a2bee04d862bde7bbdfbe5d413140fd1d}{get\+Left\+Engine\+Power}} ()
+\item 
+double \doxymbox{\hyperlink{class_engine_controller_a716fef25c75b63dfa4c366f0b67e0d64}{get\+Right\+Engine\+Power}} ()
+\item 
+void \doxymbox{\hyperlink{class_engine_controller_a77398847c3a80f8ca2eeb5488e1ca942}{update}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Engines controller class. It is unit responsible for controlling the engines. 
+
+\label{doc-func-members}
+\Hypertarget{class_engine_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_controller_a5490a32067f47bc55a50740f71b950f2}\index{EngineController@{EngineController}!attachGoalController@{attachGoalController}}
+\index{attachGoalController@{attachGoalController}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{attachGoalController()}{attachGoalController()}}
+{\footnotesize\ttfamily \label{class_engine_controller_a5490a32067f47bc55a50740f71b950f2} 
+void Engine\+Controller::\+attach\+Goal\+Controller (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_goal_controller}{Goal\+Controller}} \texorpdfstring{$\ast$}{*}}]{goal\+Controller}{}\end{DoxyParamCaption})}
+
+It sets up pointer to the \doxylink{class_goal_controller}{Goal\+Controller} 
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}goal\+Controller} & -\/ pointer to the \doxylink{class_goal_controller}{Goal\+Controller} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_controller_a2bee04d862bde7bbdfbe5d413140fd1d}\index{EngineController@{EngineController}!getLeftEnginePower@{getLeftEnginePower}}
+\index{getLeftEnginePower@{getLeftEnginePower}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{getLeftEnginePower()}{getLeftEnginePower()}}
+{\footnotesize\ttfamily \label{class_engine_controller_a2bee04d862bde7bbdfbe5d413140fd1d} 
+double Engine\+Controller::\+get\+Left\+Engine\+Power (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+It returns value of current power set for left engine \begin{DoxyReturn}{Returns}
+value of current power set for left engine 
+\end{DoxyReturn}
+\Hypertarget{class_engine_controller_a716fef25c75b63dfa4c366f0b67e0d64}\index{EngineController@{EngineController}!getRightEnginePower@{getRightEnginePower}}
+\index{getRightEnginePower@{getRightEnginePower}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{getRightEnginePower()}{getRightEnginePower()}}
+{\footnotesize\ttfamily \label{class_engine_controller_a716fef25c75b63dfa4c366f0b67e0d64} 
+double Engine\+Controller::\+get\+Right\+Engine\+Power (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+It returns value of current power set for right engine \begin{DoxyReturn}{Returns}
+value of current power set for right engine 
+\end{DoxyReturn}
+\Hypertarget{class_engine_controller_a1543e1028fbfc22280b5a1ad8029c226}\index{EngineController@{EngineController}!setLocalizationController@{setLocalizationController}}
+\index{setLocalizationController@{setLocalizationController}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{setLocalizationController()}{setLocalizationController()}}
+{\footnotesize\ttfamily \label{class_engine_controller_a1543e1028fbfc22280b5a1ad8029c226} 
+void Engine\+Controller::\+set\+Localization\+Controller (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_localization_controller}{Localization\+Controller}} \texorpdfstring{$\ast$}{*}}]{controller}{}\end{DoxyParamCaption})}
+
+It sets up pointer to the \doxylink{class_localization_controller}{Localization\+Controller} 
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}controller} & -\/ pointer to the \doxylink{class_localization_controller}{Localization\+Controller} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_controller_ad5b5a71f36517a599204fee021fe11bc}\index{EngineController@{EngineController}!setup@{setup}}
+\index{setup@{setup}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{class_engine_controller_ad5b5a71f36517a599204fee021fe11bc} 
+void Engine\+Controller::\+setup (\begin{DoxyParamCaption}\item[{int}]{L1\+Pin}{, }\item[{int}]{L2\+Pin}{, }\item[{int}]{P1\+Pin}{, }\item[{int}]{P2\+Pin}{, }\item[{int}]{Motors\+Resolution}{, }\item[{int}]{Motors\+Freq}{}\end{DoxyParamCaption})}
+
+
+
+flag -\/ true if driving in reversed is allowed 
+
+It sets up pins used to control the engines. 
+\begin{DoxyParams}{Parameters}
+{\em L1\+Pin} & -\/ first pin of left engine \\
+\hline
+{\em L2\+Pin} & -\/ second pin of left engine \\
+\hline
+{\em P1\+Pin} & -\/ first pin of right engine \\
+\hline
+{\em P2\+Pin} & -\/ secodn pin of right engine \\
+\hline
+{\em Motors\+Resolution} & -\/ resolution of PWM \\
+\hline
+{\em Motors\+Freq} & -\/ frequency of PWM \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_controller_a77398847c3a80f8ca2eeb5488e1ca942}\index{EngineController@{EngineController}!update@{update}}
+\index{update@{update}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_engine_controller_a77398847c3a80f8ca2eeb5488e1ca942} 
+void Engine\+Controller::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+update method. It does all logic of movement and engines control 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Engine\+Controller.\+h\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Engine\+Controller.\+cpp\end{DoxyCompactItemize}

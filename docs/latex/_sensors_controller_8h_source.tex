@@ -1,0 +1,77 @@
+\doxysection{Sensors\+Controller.\+h}
+\hypertarget{_sensors_controller_8h_source}{}\label{_sensors_controller_8h_source}\index{C:/Users/Paweł/Desktop/robot/robot/SensorsController.h@{C:/Users/Paweł/Desktop/robot/robot/SensorsController.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ one}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Wire.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SparkFun\_BMI270\_Arduino\_Library.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <ESP32Encoder.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Timer.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_sensors_controller}{SensorsController}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \textcolor{keywordtype}{int}\ PIN\_LeftEncoder;}
+\DoxyCodeLine{00015\ \ \ \textcolor{keywordtype}{int}\ PIN\_RightEncoder;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordtype}{int}\ PIN\_GyroSDA;}
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{int}\ PIN\_GyroSCL;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \textcolor{comment}{//static\ volatile\ long\ LeftEncoderImpulses;}}
+\DoxyCodeLine{00021\ \ \ \textcolor{comment}{//static\ volatile\ long\ RightEncoderImpulses;}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \textcolor{comment}{//static\ void\ IRAM\_ATTR\ countLeftEncoderImpulses();}}
+\DoxyCodeLine{00024\ \ \ \textcolor{comment}{//static\ void\ IRAM\_ATTR\ countRightEncoderImpulses();}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ ESP32Encoder\ \_LeftEncoder;}
+\DoxyCodeLine{00027\ \ \ ESP32Encoder\ \_RightEncoder;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ BMI270\ IMU;}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{bool}\ \_doesIMUWorks;}
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{double}\ gyroScale\ =\ 3.994;\ \ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \doxymbox{\hyperlink{class_timer}{Timer}}\ \_Timer;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{double}\ Z\_Angle\ =\ 0.0;}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{double}\ gyroDriftZ\ =\ 0.0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{double}\ X\_Angle\ =\ 0.0;}
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{double}\ gyroDriftX\ =\ 0.0;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{double}\ Y\_Angle\ =\ 0.0;}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{double}\ gyroDriftY\ =\ 0.0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{double}\ \_Accel\_X\ =\ 0.0;}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{double}\ \_Accel\_Y\ =\ 0.0;}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{double}\ \_Accel\_Z\ =\ 0.0;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{double}\ \_VerticalAcceleration\ =\ 0.0;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sensors_controller_af5f6c88359a0264be4dc2939528abc21}{setup}}(\textcolor{keywordtype}{int}\ leftEnc,\ \textcolor{keywordtype}{int}\ rightEnc,\ \textcolor{keywordtype}{int}\ SDA,\ \textcolor{keywordtype}{int}\ SCL);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sensors_controller_ad7b64029d90afee03b895d237ead8ebf}{calculateGyroZDrift}}();}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sensors_controller_ab4304e28cdda459a412869048f251e2f}{calculateGyroXDrift}}();}
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sensors_controller_a37eb944bfe2c7294b20dcb9145c6b1c4}{calculateGyroYDrift}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sensors_controller_a28e3dd78a88e530c90bd4c2d8d7ba653}{update}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_sensors_controller_a65d6c1f0557ccd5333ea9b0c2c7c9819}{getLeftEncoderImpulses}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sensors_controller_ad7a690b23abe17a39f3b35dbb6376f46}{clearLeftEncoderImpulses}}();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_sensors_controller_ac0fa0ccdd96a67f0b1db35ff136bd886}{getRightEncoderImpulses}}();}
+\DoxyCodeLine{00092\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sensors_controller_afd57d00c1e7d62a282768aed5e4a8f86}{clearRightEncoderImpulses}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_sensors_controller_adf3b1cf88b8036ee10b65440a82dcb63}{getZAngle}}();}
+\DoxyCodeLine{00101\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_sensors_controller_aec77817b5e4f47b58f3e7e027e517f9d}{getXAngle}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{double}\ getVerticalAcceleration();\ }
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_sensors_controller_a92a795aff824d07dd4ce9a43d9d675be}{getForwardAcceleration}}();\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_sensors_controller_ab92cdc542e2a334a32cda596cfa59d9a}{doesIMUWorks}}();}
+\DoxyCodeLine{00107\ \};}
+
+\end{DoxyCode}

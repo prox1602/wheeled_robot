@@ -1,0 +1,130 @@
+\doxysection{Localization\+Controller Class Reference}
+\hypertarget{class_localization_controller}{}\label{class_localization_controller}\index{LocalizationController@{LocalizationController}}
+
+
+{\ttfamily \+\#include $<$Localization\+Controller.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_localization_controller_aaab678d29d8baa9eb91713c93ae6a8ba}{Localization\+Controller}} ()
+\item 
+void \doxymbox{\hyperlink{class_localization_controller_ad0a0f7cca20467bb164631b73a3e5f5e}{setup}} (double wheel\+Diameter\+In\+Meters, int number\+Of\+Slots)
+\item 
+void \doxymbox{\hyperlink{class_localization_controller_a0f13e02ed498dd4fed0f11953f997541}{set\+Sensors\+Controller}} (\doxymbox{\hyperlink{class_sensors_controller}{Sensors\+Controller}} \&controller)
+\item 
+void \doxymbox{\hyperlink{class_localization_controller_a94f0d0d9c142c667d1ebacaecbbeea3f}{set\+Engine\+Controller}} (\doxymbox{\hyperlink{class_engine_controller}{Engine\+Controller}} \&controller)
+\item 
+bool \doxymbox{\hyperlink{class_localization_controller_a1a7f989e8ae75041bed96a13dd1e18b0}{is\+Robot\+Lifted}} ()
+\item 
+bool \doxymbox{\hyperlink{class_localization_controller_a928a0d7d9ea03181080e0b8892251ee9}{is\+Robot\+Slipping}} ()
+\item 
+void \doxymbox{\hyperlink{class_localization_controller_a5c3c9117937ff7f72afdb72e39162842}{update}} ()
+\item 
+\doxymbox{\hyperlink{struct_position}{Position}} \doxymbox{\hyperlink{class_localization_controller_ae9231fd0804d65d36d99c8bd04c9f6a6}{get\+Current\+Position}} ()
+\item 
+double \doxymbox{\hyperlink{class_localization_controller_aeb7310bfacf9ac92c8a72afde947156b}{get\+Current\+AngleZ}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controller responsible for odometry and finding current position. 
+
+\label{doc-constructors}
+\Hypertarget{class_localization_controller_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_localization_controller_aaab678d29d8baa9eb91713c93ae6a8ba}\index{LocalizationController@{LocalizationController}!LocalizationController@{LocalizationController}}
+\index{LocalizationController@{LocalizationController}!LocalizationController@{LocalizationController}}
+\doxysubsubsection{\texorpdfstring{LocalizationController()}{LocalizationController()}}
+{\footnotesize\ttfamily \label{class_localization_controller_aaab678d29d8baa9eb91713c93ae6a8ba} 
+Localization\+Controller::\+\+Localization\+Controller (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Initializing 
+
+\label{doc-func-members}
+\Hypertarget{class_localization_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_localization_controller_aeb7310bfacf9ac92c8a72afde947156b}\index{LocalizationController@{LocalizationController}!getCurrentAngleZ@{getCurrentAngleZ}}
+\index{getCurrentAngleZ@{getCurrentAngleZ}!LocalizationController@{LocalizationController}}
+\doxysubsubsection{\texorpdfstring{getCurrentAngleZ()}{getCurrentAngleZ()}}
+{\footnotesize\ttfamily \label{class_localization_controller_aeb7310bfacf9ac92c8a72afde947156b} 
+double Localization\+Controller::\+get\+Current\+AngleZ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+current robot Z angle 
+\end{DoxyReturn}
+\Hypertarget{class_localization_controller_ae9231fd0804d65d36d99c8bd04c9f6a6}\index{LocalizationController@{LocalizationController}!getCurrentPosition@{getCurrentPosition}}
+\index{getCurrentPosition@{getCurrentPosition}!LocalizationController@{LocalizationController}}
+\doxysubsubsection{\texorpdfstring{getCurrentPosition()}{getCurrentPosition()}}
+{\footnotesize\ttfamily \label{class_localization_controller_ae9231fd0804d65d36d99c8bd04c9f6a6} 
+\doxymbox{\hyperlink{struct_position}{Position}} Localization\+Controller::\+get\+Current\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+current robot position 
+\end{DoxyReturn}
+\Hypertarget{class_localization_controller_a1a7f989e8ae75041bed96a13dd1e18b0}\index{LocalizationController@{LocalizationController}!isRobotLifted@{isRobotLifted}}
+\index{isRobotLifted@{isRobotLifted}!LocalizationController@{LocalizationController}}
+\doxysubsubsection{\texorpdfstring{isRobotLifted()}{isRobotLifted()}}
+{\footnotesize\ttfamily \label{class_localization_controller_a1a7f989e8ae75041bed96a13dd1e18b0} 
+bool Localization\+Controller::\+is\+Robot\+Lifted (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+true if lifted 
+\end{DoxyReturn}
+\Hypertarget{class_localization_controller_a928a0d7d9ea03181080e0b8892251ee9}\index{LocalizationController@{LocalizationController}!isRobotSlipping@{isRobotSlipping}}
+\index{isRobotSlipping@{isRobotSlipping}!LocalizationController@{LocalizationController}}
+\doxysubsubsection{\texorpdfstring{isRobotSlipping()}{isRobotSlipping()}}
+{\footnotesize\ttfamily \label{class_localization_controller_a928a0d7d9ea03181080e0b8892251ee9} 
+bool Localization\+Controller::\+is\+Robot\+Slipping (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+true if slipping 
+\end{DoxyReturn}
+\Hypertarget{class_localization_controller_a94f0d0d9c142c667d1ebacaecbbeea3f}\index{LocalizationController@{LocalizationController}!setEngineController@{setEngineController}}
+\index{setEngineController@{setEngineController}!LocalizationController@{LocalizationController}}
+\doxysubsubsection{\texorpdfstring{setEngineController()}{setEngineController()}}
+{\footnotesize\ttfamily \label{class_localization_controller_a94f0d0d9c142c667d1ebacaecbbeea3f} 
+void Localization\+Controller::\+set\+Engine\+Controller (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_engine_controller}{Engine\+Controller}} \&}]{controller}{}\end{DoxyParamCaption})}
+
+It sets up pointer to the \doxylink{class_engine_controller}{Engine\+Controller} 
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}controller} & -\/ pointer to the \doxylink{class_engine_controller}{Engine\+Controller} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_localization_controller_a0f13e02ed498dd4fed0f11953f997541}\index{LocalizationController@{LocalizationController}!setSensorsController@{setSensorsController}}
+\index{setSensorsController@{setSensorsController}!LocalizationController@{LocalizationController}}
+\doxysubsubsection{\texorpdfstring{setSensorsController()}{setSensorsController()}}
+{\footnotesize\ttfamily \label{class_localization_controller_a0f13e02ed498dd4fed0f11953f997541} 
+void Localization\+Controller::\+set\+Sensors\+Controller (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_sensors_controller}{Sensors\+Controller}} \&}]{controller}{}\end{DoxyParamCaption})}
+
+It sets up pointer to the \doxylink{class_sensors_controller}{Sensors\+Controller} 
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}controller} & -\/ pointer to the \doxylink{class_sensors_controller}{Sensors\+Controller} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_localization_controller_ad0a0f7cca20467bb164631b73a3e5f5e}\index{LocalizationController@{LocalizationController}!setup@{setup}}
+\index{setup@{setup}!LocalizationController@{LocalizationController}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{class_localization_controller_ad0a0f7cca20467bb164631b73a3e5f5e} 
+void Localization\+Controller::\+setup (\begin{DoxyParamCaption}\item[{double}]{wheel\+Diameter\+In\+Meters}{, }\item[{int}]{number\+Of\+Slots}{}\end{DoxyParamCaption})}
+
+It sets wheel diameter and number of slots \Hypertarget{class_localization_controller_a5c3c9117937ff7f72afdb72e39162842}\index{LocalizationController@{LocalizationController}!update@{update}}
+\index{update@{update}!LocalizationController@{LocalizationController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_localization_controller_a5c3c9117937ff7f72afdb72e39162842} 
+void Localization\+Controller::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+It calculates current localization using odometry. okreslanie kierunku ruchu poprzez wyznaczenie wersora
+
+liczenie pokonanego dystansu
+
+liczenie predkosci oraz przyspieszenia w celu porownania ich z przyspieszeniem z akcelerometru i okreslenie czy robot nie zakopal sie/\+sliga sie/\+ zostal zatrzymany
+
+zablokowanie o przeszkode
+
+aktualizowanie pozycji
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Localization\+Controller.\+h\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Localization\+Controller.\+cpp\end{DoxyCompactItemize}

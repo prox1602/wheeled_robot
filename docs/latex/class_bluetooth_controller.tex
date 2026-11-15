@@ -1,0 +1,77 @@
+\doxysection{Bluetooth\+Controller Class Reference}
+\hypertarget{class_bluetooth_controller}{}\label{class_bluetooth_controller}\index{BluetoothController@{BluetoothController}}
+
+
+{\ttfamily \+\#include $<$Bluetooth\+Controller.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_bluetooth_controller_a3bf822deb412f4581ac9b3ce8c4a5a41}{setup}} (const char \texorpdfstring{$\ast$}{*}device\+Name)
+\item 
+void \doxymbox{\hyperlink{class_bluetooth_controller_a602af384afce943eacbf22dc67bca3c4}{update}} ()
+\item 
+\Hypertarget{class_bluetooth_controller_a2bf8150a35f585db11985cce7aaba875}\label{class_bluetooth_controller_a2bf8150a35f585db11985cce7aaba875} 
+void {\bfseries set\+Device\+Connected} (bool state)
+\item 
+void \doxymbox{\hyperlink{class_bluetooth_controller_afbd287f45c1c735bfb63162a9622d7c2}{receive\+Command}} (String command)
+\item 
+bool \doxymbox{\hyperlink{class_bluetooth_controller_a484e6fc6707220de39b569fddb437237}{is\+Buffor\+Full}} ()
+\item 
+std::\+queue$<$ String $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_bluetooth_controller_a9023b9387b638e2a0a52e2f447fe53eb}{get\+Buffor}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controller responsible for bluetooth communication. 
+
+\label{doc-func-members}
+\Hypertarget{class_bluetooth_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bluetooth_controller_a9023b9387b638e2a0a52e2f447fe53eb}\index{BluetoothController@{BluetoothController}!getBuffor@{getBuffor}}
+\index{getBuffor@{getBuffor}!BluetoothController@{BluetoothController}}
+\doxysubsubsection{\texorpdfstring{getBuffor()}{getBuffor()}}
+{\footnotesize\ttfamily \label{class_bluetooth_controller_a9023b9387b638e2a0a52e2f447fe53eb} 
+std::\+queue$<$ String $>$ \texorpdfstring{$\ast$}{*} Bluetooth\+Controller::\+get\+Buffor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+pointer to commands buffer 
+\end{DoxyReturn}
+\Hypertarget{class_bluetooth_controller_a484e6fc6707220de39b569fddb437237}\index{BluetoothController@{BluetoothController}!isBufforFull@{isBufforFull}}
+\index{isBufforFull@{isBufforFull}!BluetoothController@{BluetoothController}}
+\doxysubsubsection{\texorpdfstring{isBufforFull()}{isBufforFull()}}
+{\footnotesize\ttfamily \label{class_bluetooth_controller_a484e6fc6707220de39b569fddb437237} 
+bool Bluetooth\+Controller::\+is\+Buffor\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+true if full. It means the buffer contains some content. 
+\end{DoxyReturn}
+\Hypertarget{class_bluetooth_controller_afbd287f45c1c735bfb63162a9622d7c2}\index{BluetoothController@{BluetoothController}!receiveCommand@{receiveCommand}}
+\index{receiveCommand@{receiveCommand}!BluetoothController@{BluetoothController}}
+\doxysubsubsection{\texorpdfstring{receiveCommand()}{receiveCommand()}}
+{\footnotesize\ttfamily \label{class_bluetooth_controller_afbd287f45c1c735bfb63162a9622d7c2} 
+void Bluetooth\+Controller::\+receive\+Command (\begin{DoxyParamCaption}\item[{String}]{command}{}\end{DoxyParamCaption})}
+
+It get a text message, convert it to single words and push to command buffer \Hypertarget{class_bluetooth_controller_a3bf822deb412f4581ac9b3ce8c4a5a41}\index{BluetoothController@{BluetoothController}!setup@{setup}}
+\index{setup@{setup}!BluetoothController@{BluetoothController}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{class_bluetooth_controller_a3bf822deb412f4581ac9b3ce8c4a5a41} 
+void Bluetooth\+Controller::\+setup (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{device\+Name}{}\end{DoxyParamCaption})}
+
+It sets up bluetooth communication 
+\begin{DoxyParams}{Parameters}
+{\em device\+Name} & name of device \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bluetooth_controller_a602af384afce943eacbf22dc67bca3c4}\index{BluetoothController@{BluetoothController}!update@{update}}
+\index{update@{update}!BluetoothController@{BluetoothController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_bluetooth_controller_a602af384afce943eacbf22dc67bca3c4} 
+void Bluetooth\+Controller::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Updates itself 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Bluetooth\+Controller.\+h\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Bluetooth\+Controller.\+cpp\end{DoxyCompactItemize}

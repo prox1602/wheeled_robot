@@ -1,0 +1,74 @@
+\doxysection{Goal\+Controller Class Reference}
+\hypertarget{class_goal_controller}{}\label{class_goal_controller}\index{GoalController@{GoalController}}
+
+
+{\ttfamily \+\#include $<$Goal\+Controller.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_goal_controller_a504a86cea47f8ac3197e5339b63c500d}{update}} ()
+\item 
+void \doxymbox{\hyperlink{class_goal_controller_a79e78cd8d7e068276f3341b291408d73}{set\+Bluetooth\+Controller}} (\doxymbox{\hyperlink{class_bluetooth_controller}{Bluetooth\+Controller}} \texorpdfstring{$\ast$}{*}controller)
+\item 
+\doxymbox{\hyperlink{class_goal}{Goal}} \doxymbox{\hyperlink{class_goal_controller_aa40727f1cc4c5ee5dbae619296892e22}{get\+Front\+Goal}} ()
+\item 
+void \doxymbox{\hyperlink{class_goal_controller_abb6d3b2ee1b8326f4b6d4c65d523aff9}{pop\+Front\+Goal}} ()
+\item 
+bool \doxymbox{\hyperlink{class_goal_controller_a2a25da5907f6ca8d69ee80e69c67f688}{is\+Empty}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controller responsible for setting goals 
+
+\label{doc-func-members}
+\Hypertarget{class_goal_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_goal_controller_aa40727f1cc4c5ee5dbae619296892e22}\index{GoalController@{GoalController}!getFrontGoal@{getFrontGoal}}
+\index{getFrontGoal@{getFrontGoal}!GoalController@{GoalController}}
+\doxysubsubsection{\texorpdfstring{getFrontGoal()}{getFrontGoal()}}
+{\footnotesize\ttfamily \label{class_goal_controller_aa40727f1cc4c5ee5dbae619296892e22} 
+\doxymbox{\hyperlink{class_goal}{Goal}} Goal\+Controller::\+get\+Front\+Goal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+return front goal from the deque of goals 
+\end{DoxyReturn}
+\Hypertarget{class_goal_controller_a2a25da5907f6ca8d69ee80e69c67f688}\index{GoalController@{GoalController}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!GoalController@{GoalController}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{class_goal_controller_a2a25da5907f6ca8d69ee80e69c67f688} 
+bool Goal\+Controller::\+is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+It checks if deque of goals is empty \begin{DoxyReturn}{Returns}
+true if deque is empty 
+\end{DoxyReturn}
+\Hypertarget{class_goal_controller_abb6d3b2ee1b8326f4b6d4c65d523aff9}\index{GoalController@{GoalController}!popFrontGoal@{popFrontGoal}}
+\index{popFrontGoal@{popFrontGoal}!GoalController@{GoalController}}
+\doxysubsubsection{\texorpdfstring{popFrontGoal()}{popFrontGoal()}}
+{\footnotesize\ttfamily \label{class_goal_controller_abb6d3b2ee1b8326f4b6d4c65d523aff9} 
+void Goal\+Controller::\+pop\+Front\+Goal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+delete front goal from the deque of goals \Hypertarget{class_goal_controller_a79e78cd8d7e068276f3341b291408d73}\index{GoalController@{GoalController}!setBluetoothController@{setBluetoothController}}
+\index{setBluetoothController@{setBluetoothController}!GoalController@{GoalController}}
+\doxysubsubsection{\texorpdfstring{setBluetoothController()}{setBluetoothController()}}
+{\footnotesize\ttfamily \label{class_goal_controller_a79e78cd8d7e068276f3341b291408d73} 
+void Goal\+Controller::\+set\+Bluetooth\+Controller (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_bluetooth_controller}{Bluetooth\+Controller}} \texorpdfstring{$\ast$}{*}}]{controller}{}\end{DoxyParamCaption})}
+
+It sets up pointer to the \doxylink{class_bluetooth_controller}{Bluetooth\+Controller} 
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}controller} & -\/ pointer to the \doxylink{class_bluetooth_controller}{Bluetooth\+Controller} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_goal_controller_a504a86cea47f8ac3197e5339b63c500d}\index{GoalController@{GoalController}!update@{update}}
+\index{update@{update}!GoalController@{GoalController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_goal_controller_a504a86cea47f8ac3197e5339b63c500d} 
+void Goal\+Controller::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+It check if \doxylink{class_bluetooth_controller}{Bluetooth\+Controller} buffer is full and load new goals to deque 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Goal\+Controller.\+h\item 
+C:\+/\+\+Users/\+\+Paweł/\+\+Desktop/\+robot/\+robot/\+Goal\+Controller.\+cpp\end{DoxyCompactItemize}
