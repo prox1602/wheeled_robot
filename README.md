@@ -70,7 +70,7 @@ Building a reliable mobile platform required solving several mechanical, manufac
 * **Electronics & Sensor Upgrade:** Rebuilt the mainboard from scratch and switched the IMU to the **Bosch Sensortec BMI270**, resolving all I2C detection issues.
 * **Front Expansion Dock:** Added two standardized front mounting holes to dock additional modules (e.g., a future sensor expansion pack).
 
-![Chassis 3D Printing](assets/chassis_print.gif)
+![Chassis 3D Printing](assets/printing.gif)
 
 ---
 
