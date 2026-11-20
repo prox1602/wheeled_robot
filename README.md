@@ -36,7 +36,8 @@ The firmware is written in object-oriented C++ and runs in a single thread. It i
 ```text
 [Android BT App] ──▶ BluetoothController ──▶ GoalController ──┐
                                                               ▼
-   [IMU & Encoders] ──▶ SensorsController ──▶ LocalizationController ──▶ EngineController ──▶ [DRV8833 / Motors]
+   [IMU & Encoders] ──▶ SensorsController ──▶ LocalizationController ──▶
+		──▶ EngineController ──▶ [DRV8833 / Motors]
 ```
 
 * **`SensorsController`:** Handles low-level reading of raw data from the BMI270 IMU and optical encoders.
