@@ -52,7 +52,7 @@ The firmware is written in object-oriented C++ and runs in a single thread. It i
 Building a reliable mobile platform required solving several mechanical, manufacturing, and hardware issues across two prototype revisions.
 
 ### Prototype V1 (Proof of Concept)
-![Prototype V1](assets/prototype_v1.jpg)
+![Prototype V1](assets/IMG_1817.JPG)
 * **Architecture:** Monolithic, single-piece 3D-printed chassis with integrated standoffs and a quickly soldered perfboard.
 * **Key Issues Identified:**
   * **Poor DFM (Design for Manufacturing):** Integrated standoffs eliminated flat base surfaces, requiring heavy 3D-printing supports. Any minor dimensional error meant scrapping and reprinting the entire ~100g chassis.
@@ -61,7 +61,7 @@ Building a reliable mobile platform required solving several mechanical, manufac
   * **Unscalable Electronics:** The initial perfboard wiring was built solely for quick testing, making debugging and future expansion impractical.
 
 ### Prototype V2 (Modular & DFM-Optimized Redesign)
-![Prototype V2 Assembly](assets/prototype_v2.jpg)
+![Prototype V2 Assembly](assets/IMG_2010.JPG)
 * **Complete Mechanical Overhaul:** Redesigned from scratch in **Autodesk Inventor** with a focus on printability and modularity.
 * **Intermediate Mounting Brackets (Tolerance & Cost Optimization):** Instead of bolting modules directly to the main chassis, components sit on small, separate 3D-printed adapters (~2g each). This solved three issues at once:
   1. **Rapid Tolerance Calibration:** Compensating for FDM thermal shrinkage on mounting hole spacing takes minutes on a 2g bracket instead of reprinting a 100g frame.
