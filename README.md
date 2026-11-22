@@ -5,9 +5,8 @@
   <img src="assets/drive.gif" alt="Driving Test" width="600">
 </p>
 
-<p align="center">
-	https://github.com/user-attachments/assets/6468218a-55dc-4fcf-b27e-629400e1692d
-<p>
+https://github.com/user-attachments/assets/6468218a-55dc-4fcf-b27e-629400e1692d
+
 
 
 A custom-built, front-wheel differential-drive robotics platform designed in **Autodesk Inventor** and programmed in **C++** for the **ESP32-S3**. The robot features custom power distribution, modular 3D-printed mechanics, odometry tracking, and wireless control via text commands over Bluetooth.
