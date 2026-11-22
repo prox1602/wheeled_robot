@@ -1,8 +1,8 @@
 # ESP32-S3 Wheeled Robot
 
-<p>
-  <img src="assets/pic1.jpg" alt="Wheeled Robot" width="400">
-  <img src="assets/drive.gif" alt="Driving Test" width="400">
+<p align="center">
+  <img src="assets/pic1.jpg" alt="Wheeled Robot" width="600">
+  <img src="assets/drive.gif" alt="Driving Test" width="600">
 </p>
 
 https://github.com/user-attachments/assets/6468218a-55dc-4fcf-b27e-629400e1692d
@@ -19,8 +19,8 @@ A custom-built, front-wheel differential-drive robotics platform designed in **A
 
 The robot combines off-the-shelf electronic modules with a custom-soldered distribution board, dedicated battery protection, and 3D-printed mechanical parts.
 
-<p>
-  <img src="assets/pic4.jpeg" alt="Wheeled Robot PCB" width="400">
+<p align="center">
+  <img src="assets/pic4.jpeg" alt="Wheeled Robot PCB" width="600">
 </p>
 
 ### Core Computing & Sensors
@@ -38,8 +38,8 @@ The robot combines off-the-shelf electronic modules with a custom-soldered distr
 * **Battery Management System (BMS):** Integrated **2S 10A BMS** module providing safe charging, over-discharge protection, and cell balancing.
 * **Mainboard:** Modules and power lines are manually routed and soldered on a **50x70mm double-sided universal PCB**.
 
-<p>
-  <img src="assets/pic3.jpg" alt="Wheeled Robot Side" width="400">
+<p align="center">
+  <img src="assets/pic3.jpg" alt="Wheeled Robot Side" width="600">
 </p>
 
 ---
@@ -69,8 +69,8 @@ Building a reliable mobile platform required solving several mechanical, manufac
 
 ### Prototype V1 (Proof of Concept)
 
-<p>
-   <img src="assets/IMG_1817.JPG" alt="Prototype V1" width="400">
+<p align="center">
+   <img src="assets/IMG_1817.JPG" alt="Prototype V1" width="600">
 </p>
 
 * **Architecture:** Monolithic, single-piece 3D-printed chassis with integrated standoffs and a quickly soldered perfboard.
@@ -82,12 +82,10 @@ Building a reliable mobile platform required solving several mechanical, manufac
 
 ### Prototype V2 (Modular & DFM-Optimized Redesign)
 
-<p>
-   <img src="assets/pic2.jpg" alt="Wheeled Robot Front" width="400">
-</p>
+<p align="center">
+   <img src="assets/pic2.jpg" alt="Wheeled Robot Front" width="600">
 
-<p>
-   <img src="assets/IMG_2010.JPG" alt="Prototype V2 Assembly" width="400">
+   <img src="assets/IMG_2010.JPG" alt="Prototype V2 Assembly" width="600">
 </p>
 
 * **Complete Mechanical Overhaul:** Redesigned from scratch in **Autodesk Inventor** with a focus on printability and modularity.
@@ -98,7 +96,7 @@ Building a reliable mobile platform required solving several mechanical, manufac
 * **Electronics & Sensor Upgrade:** Rebuilt the mainboard from scratch and switched the IMU to the **Bosch Sensortec BMI270**, resolving all I2C detection issues.
 * **Front Expansion Dock:** Added two standardized front mounting holes to dock additional modules (e.g., a future sensor expansion pack).
 
-<p>
+<p align="center">
    <img src="assets/printing.gif" alt="Chassis 3D Printing" width="600">
 </p>
 
