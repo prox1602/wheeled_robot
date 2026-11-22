@@ -99,7 +99,7 @@ Building a reliable mobile platform required solving several mechanical, manufac
 * **Front Expansion Dock:** Added two standardized front mounting holes to dock additional modules (e.g., a future sensor expansion pack).
 
 <p>
-   <img src="assets/printing.gif" alt="Chassis 3D Printing" width="400">
+   <img src="assets/printing.gif" alt="Chassis 3D Printing" width="600">
 </p>
 
 ---
