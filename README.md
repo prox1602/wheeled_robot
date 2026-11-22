@@ -5,7 +5,7 @@
   <img src="assets/drive.gif" alt="Driving Test" width="400">
   <img src="assets/pic2.jpg" alt="Wheeled Robot Front" width="400">
   <img src="assets/pic3.jpg" alt="Wheeled Robot Side" width="400">
-  <img src="assets/pic4.jpg" alt="Wheeled Robot PCB" width="400">
+  <img src="assets/pic4.jpeg" alt="Wheeled Robot PCB" width="400">
 </p>
 
 https://github.com/user-attachments/assets/6468218a-55dc-4fcf-b27e-629400e1692d
