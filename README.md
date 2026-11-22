@@ -3,9 +3,6 @@
 <p>
   <img src="assets/pic1.jpg" alt="Wheeled Robot" width="400">
   <img src="assets/drive.gif" alt="Driving Test" width="400">
-  <img src="assets/pic2.jpg" alt="Wheeled Robot Front" width="400">
-  <img src="assets/pic3.jpg" alt="Wheeled Robot Side" width="400">
-  <img src="assets/pic4.jpeg" alt="Wheeled Robot PCB" width="400">
 </p>
 
 https://github.com/user-attachments/assets/6468218a-55dc-4fcf-b27e-629400e1692d
@@ -22,6 +19,10 @@ A custom-built, front-wheel differential-drive robotics platform designed in **A
 
 The robot combines off-the-shelf electronic modules with a custom-soldered distribution board, dedicated battery protection, and 3D-printed mechanical parts.
 
+<p>
+  <img src="assets/pic4.jpeg" alt="Wheeled Robot PCB" width="400">
+</p>
+
 ### Core Computing & Sensors
 * **Microcontroller:** **ESP32-S3**. The firmware runs on a single-threaded super-loop architecture (without an RTOS or multi-core tasking), using hardware interrupts for time-critical encoder readings.
 * **IMU (Inertial Measurement Unit):** **Bosch Sensortec BMI270 (I2C)**. A modern, low-power 6-axis inertial sensor chosen for reliable I2C communication and low noise.
@@ -36,6 +37,10 @@ The robot combines off-the-shelf electronic modules with a custom-soldered distr
 * **Battery Pack:** **2S Li-Ion** pack (2x 18650 cells in series, 7.4V – 8.4V).
 * **Battery Management System (BMS):** Integrated **2S 10A BMS** module providing safe charging, over-discharge protection, and cell balancing.
 * **Mainboard:** Modules and power lines are manually routed and soldered on a **50x70mm double-sided universal PCB**.
+
+<p>
+  <img src="assets/pic3.jpg" alt="Wheeled Robot Side" width="400">
+</p>
 
 ---
 
@@ -63,7 +68,11 @@ The firmware is written in object-oriented C++ and runs in a single thread. It i
 Building a reliable mobile platform required solving several mechanical, manufacturing, and hardware issues across two prototype revisions.
 
 ### Prototype V1 (Proof of Concept)
-![Prototype V1](assets/IMG_1817.JPG)
+
+<p>
+   <img src="assets/IMG_1817.JPG" alt="Prototype V1" width="400">
+</p>
+
 * **Architecture:** Monolithic, single-piece 3D-printed chassis with integrated standoffs and a quickly soldered perfboard.
 * **Key Issues Identified:**
   * **Poor DFM (Design for Manufacturing):** Integrated standoffs eliminated flat base surfaces, requiring heavy 3D-printing supports. Any minor dimensional error meant scrapping and reprinting the entire ~100g chassis.
@@ -72,7 +81,15 @@ Building a reliable mobile platform required solving several mechanical, manufac
   * **Unscalable Electronics:** The initial perfboard wiring was built solely for quick testing, making debugging and future expansion impractical.
 
 ### Prototype V2 (Modular & DFM-Optimized Redesign)
-![Prototype V2 Assembly](assets/IMG_2010.JPG)
+
+<p>
+   <img src="assets/pic2.jpg" alt="Wheeled Robot Front" width="400">
+</p>
+
+<p>
+   <img src="assets/IMG_2010.JPG" alt="Prototype V2 Assembly" width="400">
+</p>
+
 * **Complete Mechanical Overhaul:** Redesigned from scratch in **Autodesk Inventor** with a focus on printability and modularity.
 * **Intermediate Mounting Brackets (Tolerance & Cost Optimization):** Instead of bolting modules directly to the main chassis, components sit on small, separate 3D-printed adapters (~2g each). This solved three issues at once:
   1. **Rapid Tolerance Calibration:** Compensating for FDM thermal shrinkage on mounting hole spacing takes minutes on a 2g bracket instead of reprinting a 100g frame.
@@ -81,7 +98,9 @@ Building a reliable mobile platform required solving several mechanical, manufac
 * **Electronics & Sensor Upgrade:** Rebuilt the mainboard from scratch and switched the IMU to the **Bosch Sensortec BMI270**, resolving all I2C detection issues.
 * **Front Expansion Dock:** Added two standardized front mounting holes to dock additional modules (e.g., a future sensor expansion pack).
 
-![Chassis 3D Printing](assets/printing.gif)
+<p>
+   <img src="assets/printing.gif" alt="Chassis 3D Printing" width="400">
+</p>
 
 ---
 
