@@ -1,6 +1,10 @@
 # ESP32-S3 Wheeled Robot
 
-![Final Robot](assets/pic1.jpg)
+<p>
+  <img src="assets/pic1.jpg" alt="Wheeled Robot" width="400">
+  <img src="assets/drive.gif" alt="Driving Test" width="400">
+</p>
+
 ![Final Robot](assets/pic2.jpg)
 ![Final Robot](assets/pic3.jpg)
 ![Final Robot](assets/pic4.jpeg)
