@@ -4,7 +4,8 @@
 ![Final Robot](assets/pic2.jpg)
 ![Final Robot](assets/pic3.jpg)
 ![Final Robot](assets/pic4.jpeg)
-https://github.com/prox1602/wheeled_robot/blob/main/assets/drive_compressed.mp4
+[[https://github.com/user-attachments/assets/](https://github.com/prox1602/wheeled_robot/blob/main/assets/drive_compressed.mp4)]([https://github.com/user-attachments/assets/](https://github.com/prox1602/wheeled_robot/blob/main/assets/drive_compressed.mp4))...
+
 
 A custom-built, front-wheel differential-drive robotics platform designed in **Autodesk Inventor** and programmed in **C++** for the **ESP32-S3**. The robot features custom power distribution, modular 3D-printed mechanics, odometry tracking, and wireless control via text commands over Bluetooth.
 
